@@ -20,9 +20,7 @@ def parse_log_file(file_path, num_lines):
                     time_date = f"{timestamp.year-2000}년 {timestamp.month1}월 {timestamp.day}일"
 
                     am_pm = "오전" if timestamp.hour < 12 else "오후"
-                    hour = timestamp.hour 
-                    if timestamp.hour <= 12
-                    else timestamp.hour - 12
+                    hour = timestamp.hour if timestamp.hour <= 12 else timestamp.hour - 12
                     time_time = f"{am_pm} {hour}시 {timestamp.minute}분 {timestamp.second}초"
                     
                     parsed_logs.append(
